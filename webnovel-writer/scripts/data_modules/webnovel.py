@@ -245,9 +245,15 @@ def main() -> None:
     p_init = sub.add_parser("init", help="转发到 init_project.py（初始化项目）")
     p_init.add_argument("args", nargs=argparse.REMAINDER)
 
+    p_novelos_init = sub.add_parser("novelos-init", help="初始化 NovelOS 项目")
+    p_novelos_init.add_argument("args", nargs=argparse.REMAINDER)
+
     p_extract_context = sub.add_parser("extract-context", help="转发到 extract_chapter_context.py")
     p_extract_context.add_argument("--chapter", type=int, required=True, help="目标章节号")
     p_extract_context.add_argument("--format", choices=["text", "json"], default="text", help="输出格式")
+
+    p_novelos = sub.add_parser("novelos", help="NovelOS CLI")
+    p_novelos.add_argument("args", nargs=argparse.REMAINDER)
 
     # 兼容：允许 `--project-root` 出现在任意位置（减少 agents/skills 拼命令的出错率）
     from .cli_args import normalize_global_project_root
@@ -270,6 +276,12 @@ def main() -> None:
     # init 是创建项目，不应该依赖/注入已存在 project_root
     if tool == "init":
         raise SystemExit(_run_script("init_project.py", rest))
+
+    if tool == "novelos-init":
+        raise SystemExit(_run_script("novelos_init.py", rest))
+
+    if tool == "novelos":
+        raise SystemExit(_run_data_module("novelos_cli", rest))
 
     # 其余工具：统一解析 project_root 后前置给下游
     project_root = _resolve_root(args.project_root)
@@ -303,6 +315,9 @@ def main() -> None:
     if tool == "extract-context":
         return_args = [*forward_args, "--chapter", str(args.chapter), "--format", str(args.format)]
         raise SystemExit(_run_script("extract_chapter_context.py", return_args))
+
+    if tool == "novelos":
+        raise SystemExit(_run_data_module("novelos_cli", rest))
 
     raise SystemExit(2)
 
