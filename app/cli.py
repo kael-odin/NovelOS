@@ -418,3 +418,48 @@ cli.add_command(workflow_group, name="workflow")
 
 if __name__ == "__main__":
     cli()
+
+
+def generate():
+    """生成命令入口"""
+    pass
+
+
+def review():
+    """评审命令入口"""
+    pass
+
+
+def revise():
+    """修订命令入口"""
+    pass
+
+
+def summarize():
+    """摘要命令入口"""
+    pass
+
+
+def coherence():
+    """连贯性检查命令入口"""
+    pass
+
+
+def bible():
+    """故事圣经命令入口"""
+    pass
+
+
+def plan():
+    """规划命令入口"""
+    pass
+
+
+def context():
+    """上下文命令入口"""
+    pass
+
+
+def task():
+    """任务命令入口"""
+    pass

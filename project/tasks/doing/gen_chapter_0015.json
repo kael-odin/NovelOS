@@ -1,0 +1,24 @@
+{
+  "task_id": "gen_chapter_0015",
+  "type": "generate_chapter",
+  "status": "drafted",
+  "chapter": 15,
+  "volume": null,
+  "inputs": {
+    "chapter_plan": "project/outlines/chapter_plans/chapter_0015.md",
+    "context_bundle": "project/memory/context/chapter_0015_context.md"
+  },
+  "outputs": {
+    "draft": "project/chapters/drafts/chapter_0015.md"
+  },
+  "constraints": {
+    "target_words_min": 2500,
+    "target_words_max": 5000,
+    "must_have_hook": true
+  },
+  "created_at": "2026-03-13T14:56:35.277626",
+  "started_at": null,
+  "completed_at": null,
+  "error_message": null,
+  "retry_count": 0
+}

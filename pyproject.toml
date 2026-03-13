@@ -37,6 +37,15 @@ dev = [
 
 [project.scripts]
 novelos = "app.cli:cli"
+novelos-generate = "app.cli:generate"
+novelos-review = "app.cli:review"
+novelos-revise = "app.cli:revise"
+novelos-summarize = "app.cli:summarize"
+novelos-coherence = "app.cli:coherence"
+novelos-bible = "app.cli:bible"
+novelos-plan = "app.cli:plan"
+novelos-context = "app.cli:context"
+novelos-task = "app.cli:task"
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]

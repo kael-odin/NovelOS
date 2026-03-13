@@ -7,8 +7,21 @@ from .review_service import ReviewService
 from .revision_service import RevisionService
 from .rag_service import RAGService
 from .coherence_service import CoherenceService, CoherenceIssue, CoherenceIssueType
-from .extraction_service import ExtractionService, StateChange, ChangeType
+from .extraction_service import ExtractionService, StateChange as ExtractionStateChange, ChangeType
 from .bible_update_service import BibleUpdateService
+from ..core import (
+    CoreConfig,
+    get_config,
+    IndexManager,
+    EntityMeta,
+    StateChangeMeta,
+    RelationshipMeta,
+    SQLStateManager,
+    EntityData,
+    RAGAdapter,
+    SearchResult,
+    ContextManager,
+)
 
 __all__ = [
     "FileService",
@@ -23,7 +36,18 @@ __all__ = [
     "CoherenceIssue",
     "CoherenceIssueType",
     "ExtractionService",
-    "StateChange",
+    "ExtractionStateChange",
     "ChangeType",
     "BibleUpdateService",
+    "CoreConfig",
+    "get_config",
+    "IndexManager",
+    "EntityMeta",
+    "StateChangeMeta",
+    "RelationshipMeta",
+    "SQLStateManager",
+    "EntityData",
+    "RAGAdapter",
+    "SearchResult",
+    "ContextManager",
 ]
