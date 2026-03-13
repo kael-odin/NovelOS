@@ -1,0 +1,33 @@
+{
+  "name": "novelos",
+  "version": "1.0.0",
+  "description": "NovelOS - 长篇小说工程系统",
+  "skills": [
+    {
+      "name": "novelos-init",
+      "path": "skills/novelos-init/SKILL.md"
+    },
+    {
+      "name": "novelos-plan",
+      "path": "skills/novelos-plan/SKILL.md"
+    },
+    {
+      "name": "novelos-write",
+      "path": "skills/novelos-write/SKILL.md"
+    },
+    {
+      "name": "novelos-review",
+      "path": "skills/novelos-review/SKILL.md"
+    },
+    {
+      "name": "novelos-revise",
+      "path": "skills/novelos-revise/SKILL.md"
+    },
+    {
+      "name": "novelos-context",
+      "path": "skills/novelos-context/SKILL.md"
+    }
+  ],
+  "agents": [],
+  "references": []
+}

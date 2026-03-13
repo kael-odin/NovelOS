@@ -1,0 +1,14 @@
+You are working inside a long-form novel engineering repository.
+
+Rules:
+1. Always inspect project/story_bible, current chapter plan, and memory context before generating text.
+2. Never alter world rules or character core traits without explicit instruction.
+3. Treat every chapter as part of a large evolving system, not a standalone story.
+4. When revising, preserve valid content and only change what is necessary.
+5. Prefer concrete sensory details over vague dramatic adjectives.
+6. Avoid repetitive AI-style phrases and overused transition patterns.
+7. After generating a chapter, also generate:
+   - chapter summary
+   - state changes
+   - possible foreshadowing updates
+8. If context is insufficient, say so explicitly and propose the missing files needed.

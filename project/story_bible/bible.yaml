@@ -1,0 +1,185 @@
+project_name: "示例玄幻小说"
+genre:
+  - 玄幻
+  - 成长
+  - 热血
+
+world:
+  name: "青云大陆"
+  core_rules:
+    - "灵气为修炼之本，境界决定力量上限"
+    - "宗门掌控资源，散修生存艰难"
+    - "上古遗迹蕴含机缘与危险"
+  power_system:
+    type: "修仙"
+    realms:
+      - name: "炼气"
+        layers: 9
+      - name: "筑基"
+        layers: 3
+      - name: "金丹"
+        layers: 3
+      - name: "元婴"
+        layers: 3
+  factions:
+    - name: "青云宗"
+      type: "正道宗门"
+      tier: "一流"
+    - name: "血煞门"
+      type: "魔道宗门"
+      tier: "一流"
+  locations:
+    - name: "青云宗"
+      type: "宗门"
+    - name: "天机城"
+      type: "城市"
+
+characters:
+  - id: "char_linmo"
+    name: "林墨"
+    role: "protagonist"
+    gender: "male"
+    age_start: 16
+    personality_core:
+      - "隐忍"
+      - "重情"
+      - "倔强"
+    flaws:
+      - "不愿轻易求助"
+      - "面对亲近之人时容易嘴硬"
+    growth_arc: "从边缘少年成长为真正能承担责任的人"
+    speech_style:
+      tone: "平时克制，熟人前略带少年气"
+      habits:
+        - "少说空话"
+        - "压力大时语气更短"
+    current_state:
+      realm: "炼气六层"
+      location: "青云宗杂役院"
+      health: "左臂旧伤未愈"
+      emotion: "谨慎但有底气"
+      resources:
+        - "古籍（父亲遗留）"
+        - "青元丹×2"
+        - "灵石×10"
+        - "血煞门令牌"
+    first_appearance: 1
+    status: "alive"
+
+  - id: "char_suyao"
+    name: "苏瑶"
+    role: "heroine"
+    personality_core:
+      - "聪慧"
+      - "警惕"
+      - "表面冷淡内里温软"
+    speech_style:
+      tone: "简洁，偶尔带讥诮"
+    current_state:
+      realm: "筑基初期"
+      location: "青云宗内门"
+      emotion: "对林墨保持观察"
+    status: "alive"
+
+  - id: "char_zhaohu"
+    name: "赵虎"
+    role: "antagonist_minor"
+    personality_core:
+      - "欺软怕硬"
+      - "贪婪"
+    current_state:
+      realm: "炼气五层"
+      location: "青云宗杂役院"
+      status: "alive"
+      notes: "疑似血煞门奸细"
+
+  - id: "char_xiaoshitou"
+    name: "小石头"
+    role: "supporting"
+    personality_core:
+      - "胆小"
+      - "善良"
+      - "忠诚"
+    current_state:
+      realm: "炼气二层"
+      location: "青云宗杂役院"
+    status: "alive"
+
+foreshadowings:
+  - id: "f001"
+    title: "神秘玉佩的异动"
+    planted_at: 1
+    description: "林墨佩戴的旧玉佩会在危机中微微发热，似乎与失踪的父亲有关。"
+    thread_type: "main_mystery"
+    importance: "high"
+    status: "active"
+    hints:
+      - chapter: 1
+        content: "初次异动，帮助突破"
+      - chapter: 2
+        content: "石碑上有相同符文"
+    planned_resolution:
+      chapter: 180
+      description: "玉佩是远古封印钥匙之一"
+
+  - id: "f002"
+    title: "父亲的失踪"
+    planted_at: 1
+    description: "三年前父亲神秘失踪，当晚有黑衣人闯入。"
+    thread_type: "main_mystery"
+    importance: "high"
+    status: "active"
+    hints:
+      - chapter: 1
+        content: "林墨回忆父亲失踪之夜"
+      - chapter: 2
+        content: "发现父亲遗留的古籍"
+    planned_resolution:
+      chapter: 450
+      description: "父亲被卷入正魔大战"
+
+  - id: "f003"
+    title: "血煞门奸细"
+    planted_at: 3
+    description: "赵虎身上搜到血煞门令牌，可能是奸细。"
+    thread_type: "subplot"
+    importance: "medium"
+    status: "active"
+    hints:
+      - chapter: 3
+        content: "从赵虎身上搜到血煞门令牌"
+    planned_resolution:
+      chapter: 97
+      description: "揭露血煞门渗透青云宗的阴谋"
+
+timeline:
+  - chapter: 1
+    date_marker: "青云历 4321年 初春"
+    event: "林墨入宗失败后被留作杂役"
+  - chapter: 2
+    date_marker: "次日"
+    event: "林墨发现隐蔽山谷，获得古籍和丹药"
+  - chapter: 3
+    date_marker: "当夜"
+    event: "林墨击败赵虎，发现血煞门令牌"
+
+relationships:
+  - source: "char_linmo"
+    target: "char_suyao"
+    type: "potential_romance"
+    current_status: "互相试探"
+    arc: "警惕 -> 信任 -> 生死相依"
+    latest_update_chapter: 1
+
+  - source: "char_linmo"
+    target: "char_zhaohu"
+    type: "enemy"
+    current_status: "暗中敌对"
+    arc: "欺凌 -> 被击败 -> 阴谋"
+    latest_update_chapter: 3
+
+  - source: "char_linmo"
+    target: "char_xiaoshitou"
+    type: "friendship"
+    current_status: "小石头依附林墨"
+    latest_update_chapter: 2
