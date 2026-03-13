@@ -1,0 +1,24 @@
+project:
+  name: test_novel
+  slug: test_novel
+  language: zh-CN
+  genre:
+  - 仙侠
+  target_words: 30000
+  target_chapters: 10
+  target_volumes: 1
+writing:
+  chapter_word_range:
+  - 2500
+  - 5000
+  scene_per_chapter_range:
+  - 3
+  - 6
+  pov_mode: limited-third-person
+  style_goal: 自然流畅、情绪真实、减少AI味
+  hook_requirement: true
+  revision_rounds: 2
+workflow:
+  summary_after_each_chapter: true
+  consistency_check_after_each_chapter: true
+  global_check_every_n_chapters: 20

@@ -21,6 +21,13 @@ projects/*/memory/
 projects/*/.novelos/
 project/
 
+# Test project data (exclude generated content)
+test_novel/project/chapters/drafts/
+test_novel/project/chapters/final/
+test_novel/project/memory/
+test_novel/project/reviews/
+test_novel/.novelos/
+
 # OS / editor
 .DS_Store
 Thumbs.db
