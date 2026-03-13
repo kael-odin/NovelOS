@@ -11,6 +11,15 @@ venv/
 
 # Local runtime data
 .webnovel/
+.novelos/
+*.db
+*.db-journal
+
+# Project data (user-specific)
+projects/*/chapters/
+projects/*/memory/
+projects/*/.novelos/
+project/
 
 # OS / editor
 .DS_Store
@@ -22,14 +31,11 @@ Thumbs.db
 node_modules/
 .npm-cache/
 dist/
-!webnovel-writer/dashboard/frontend/dist/
-!webnovel-writer/dashboard/frontend/dist/**
-nul
 .tmp/
 .tmp_*
 .tmp_outline_check/
 
-# Local research / sibling projects (avoid accidental commit)
+# Local research / sibling projects
 .sisyphus/
 De-AI-Prompt/
 MuMuAINovel/
@@ -38,7 +44,7 @@ ai-writing-knowledge/
 novel/
 novel-refined/
 
-# Local analysis snapshots and draft docs
+# Local analysis snapshots
 PROJECT_MINDMAP*.md
 webnovel-writer-v5*-architecture.svg
 _v52_*.json
